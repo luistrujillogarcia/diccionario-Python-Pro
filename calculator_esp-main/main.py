@@ -54,12 +54,15 @@ def submit_form():
     email = request.form["email"]
     address = request.form["address"]
     date = request.form["date"]
+    message = request.form.get('message')
 
     with open('form.txt', 'a',) as f:
         f.write("Tu nombre: " + name + '/n')
         f.write("Tu correo: " + email + '/n')
         f.write("Tu dirección: " + address + '/n')
         f.write("Tu fecha: " + date + '/n')
+        f.write("Tu mensaje: " + message + '/n')
+        f.write("=" *30 + "\n")  # Separador entre envíos
 
     # Puedes guardar tus datos o enviarlos por correo electrónico
     return render_template('form_result.html', 
@@ -67,6 +70,7 @@ def submit_form():
                            name = name,
                            address = address,
                            date = date,
+                           message = message,
                            )
 
 app.run(debug=True)
