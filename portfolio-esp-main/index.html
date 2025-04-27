@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">HOME</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">ABOUT</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">MY SKILLS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">NAME SURNAME</h1>
+        <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">ABOUT ME</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            - Lo que sé todo sobre mí es que soy una persona que tiene síndrome de Asperger, a veces tengo problemas de no interesarme en estudiar y hacer actividades 
+            pero en mi corazón me dice que tienes que hacerlo o dejarlo, no debo intentarlo y aproveché esa decisión. Lo que me enseñan a veces me complica mucho en tratar 
+            de poner atención en lo que me dicen pero hago un esfuerzo en tratar de hacerlo y sacar buenas calificaciones para así pasar los siguientes clases, las únicas carreras 
+            en las que quiero pasar es ser un diseñador gráfico y un programador de python, las únicas carreras en las que quiero ser mejor o especial.
+          </p>
+          <img
+            class="info-block__img"
+            src="https://fava.cl/wp-content/uploads/2024/11/Cuanto-gana-un-disenador-grafico-al-mes-en-Chile-1024x683.jpg"
+            alt="me"
+            width="500"
+            height="400"
+          />
+          <img
+            class="info-block__img"
+            src="https://www.paredro.com/wp-content/uploads/2014/12/dise%C3%B1ador-gr%C3%A1fico.jpg"
+            alt="me"
+            width="500"
+            height="400"
+          />
+
+          <img
+            class="info-block__img"
+            src="https://bw.tokioschool.com/wp-content/uploads/2023/04/python-1.jpg.webp"
+            alt="me"
+            width="500"
+            height="400"
+          />
+          <img
+            class="info-block__img"
+            src="https://media.istockphoto.com/id/2156385097/es/foto/hispanic-latin-american-couple-software-engineer-developer-use-computer-work-on-program-coding.jpg?s=1024x1024&w=is&k=20&c=MKAyqInYKUVpq4bWcvcmBUuBxuYDCVYZvRuh6KR070Y="
+            alt="me"
+            width="600"
+            height="700"
+          />
+        </div>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">MY SKILLS</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/python.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/discord.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/html.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/db.webp"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Skill info</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/280741229/original/12ead1aaddadf7cda82c2876dc0a584bcd207d92/design-a-discord-server.png" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="https://i.ytimg.com/vi/0Vmta0c6knQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYACpAWKAgwIABABGGUgXShaMA8=&rs=AOn4CLBGP__-uRymkvS8UDHheq-e5L6tZw" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="https://media.istockphoto.com/id/1475998284/es/foto/interior-de-la-gran-sala-de-servidores-moderna-ilustraci%C3%B3n-de-renderizado-3d.jpg?s=612x612&w=0&k=20&c=ubYpdRUq_MtKgsoGzr3MKZgYDQiSP-sBUslXqj176Rg=" alt="project" width="500">
+              <a class="project__link" href="">Abierto en GitHub</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
